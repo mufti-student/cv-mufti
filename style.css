@@ -1,0 +1,56 @@
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #e5e7eb;
+}
+
+/* Container A4 */
+.cv-box {
+  width: 210mm;
+  min-height: 297mm;
+  background: #ffffff;
+  margin: 0 auto;
+}
+
+/* Skema Warna Ungu */
+.bg-purple {
+  background-color: #2772ae;
+}
+
+.text-purple {
+  color: #2772ae;
+}
+
+/* Heading Seksi */
+.section-title {
+  color: #2772ae;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #ddd6fe;
+}
+
+/* Pengaturan Cetak / Print PDF */
+@media print {
+  body {
+    background: #ffffff;
+    padding: 0;
+  }
+  .no-print {
+    display: none;
+  }
+  .cv-box {
+    box-shadow: none;
+    width: 100%;
+    margin: 0;
+  }
+  @page {
+    size: A4;
+    margin: 0;
+  }
+}
